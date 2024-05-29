@@ -1,0 +1,280 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+.mission-list,
+.rocket-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #dddddd;
+}
+
+td:nth-child(1) {
+  font-weight: bold;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+  background-color: #82beff5a;
+}
+
+a {
+  color: #009879;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.reserve-button,
+.cancel-button,
+.active-member,
+.not-a-member {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.reserve-button,
+.active-member {
+  color: #fff;
+}
+
+.reserve-button {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background-color: white;
+  cursor: pointer;
+}
+
+.reserve-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.cancel-button,
+.not-a-member {
+  color: #fff;
+}
+
+.cancel-button {
+  cursor: pointer;
+  border: 1px solid #dc3545;
+  background-color: white;
+  color: #dc3545;
+}
+
+.cancel-button:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.active-member {
+  background-color: #28a745;
+  opacity: 0.6;
+}
+
+.not-a-member {
+  background-color: #dc3545;
+  opacity: 0.6;
+}
+
+.rocket-card {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rocket-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.rocket-details {
+  flex-grow: 1;
+}
+
+.rocket-details h3 {
+  margin-top: 0;
+}
+
+.rocket-details p {
+  margin: 8px 0;
+}
+
+.profile-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-section {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.profile-section h3 {
+  margin-top: 0;
+}
+
+.profile-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-section li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.reserved-text {
+  background-color: #28a745;
+  color: white;
+  padding: 0 5px;
+  margin: 1px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  } */
+
+  .mission-list,
+  .rocket-list {
+    padding: 0;
+  }
+
+  .rocket-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rocket-image {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 16px;
+
+  }
+
+  table {
+    font-size: 0.9em;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
